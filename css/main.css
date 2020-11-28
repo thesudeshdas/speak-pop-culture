@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Major+Mono+Display&family=Montserrat&family=Pacifico&family=Piedra&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Lato&family=Major+Mono+Display&family=Montserrat&family=Pacifico&family=Piedra&family=Roboto&display=swap');
 
 :root {
     font-family: 'Roboto', sans-serif;
     
-    --theme-primary: #DC2626;
-    --theme-secondary: #FCA5A5;
-    --text-primary: black;
-    --text-secondary: white;
+    --bg-white: white;
+    --theme-primary: #2563EB;
+    --theme-secondary: #93C5FD;
+    --text-primary: #000000;
+    --text-secondary: #ffffff;
     
 }
 
@@ -16,7 +17,9 @@ body, html {
 }
 
 
-
+h1 {
+    margin: 0;
+}
 
 
 
@@ -26,7 +29,8 @@ body, html {
 }
 
 .text-wakanda {
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Gugi', cursive;
+    font-weight: bolder;
 }
 
 .text-kitty {
@@ -36,16 +40,24 @@ body, html {
 /* navbar */
 nav {
     background-color: var(--theme-primary);
+    color: var(--text-secondary);
 }
 
 .heading-nav {
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem;
 }
 
-nav ul {
+nav li {
+    font-size: 1.3rem;
+}
+
+ul {
+    padding-left: 0;
     list-style: none;
-    text-align: right;
+    text-align: center;
 }
 
 ul li {
@@ -56,11 +68,17 @@ ul li {
 /* link */
 a {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--text-secondary);
+}
+
+.link-active {
+    text-decoration: underline;
 }
 
 /* button */
 button {
+    display: block;
+    margin: auto;
     border: none;
     background-color: var(--theme-primary);
     color: var(--text-secondary);
@@ -83,6 +101,11 @@ button {
 footer {
     background-color: var(--theme-primary);
     padding-top: 1rem;
+    margin-top: 1rem;
+    position: relative;
+    bottom: 10;
+    width: 100%;
+    color: var(--text-secondary);
 }
 
 .heading-footer {
@@ -92,8 +115,7 @@ footer {
 }
 
 footer ul {
-    padding-left: 0;
-    text-align: center;
+    margin-bottom: 0;
 }
 
 /* section */
@@ -104,8 +126,96 @@ section {
 
 /* container */
 .container {
-    border: 1px solid var(--text-primary);
+    border: 2px solid var(--text-primary);
     border-radius: 0.4rem;
     padding: 1rem;
 }
 
+.container-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-flex-item {
+    background-color: var(--bg-white);
+    margin: 1rem;
+    position: relative;
+}
+
+.container-contents {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;            
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.container-contents h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.7rem;
+}
+
+.container-contents p {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* backgrounds */
+.bg {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg-minion {
+    background-image: url(/images/bg-minion.jpg);
+}
+
+.bg-wakanda {
+    background-image: url(/images/bg-wakanda.jpg);
+}
+
+.bg-kitty {
+    background-image: url(/images/bg-kitty.jpeg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* desktop */ 
+@media only screen and (min-width: 768px) {
+    .container-flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .container-flex-item {
+        width: 30%;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
