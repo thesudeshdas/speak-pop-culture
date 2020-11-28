@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Major+Mono+Display&family=Montserrat&family=Pacifico&family=Piedra&family=Roboto&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    
+    --theme-primary: #DC2626;
+    --theme-secondary: #FCA5A5;
+    --text-primary: black;
+    --text-secondary: white;
+    
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+/* typography */
+.text-minion {
+    font-family: 'Pacifico', cursive;
+}
+
+.text-wakanda {
+    font-family: 'Major Mono Display', monospace;
+}
+
+.text-kitty {
+    font-family: 'Piedra', cursive;
+}
+
+/* navbar */
+nav {
+    background-color: var(--theme-primary);
+}
+
+.heading-nav {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 0.5rem 1rem 0.5rem;
+}
+
+/* link */
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+/* button */
+button {
+    border: none;
+    background-color: var(--theme-primary);
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+}
+
+/* text area */
+.text-area {
+    display: block;
+    margin: 2rem auto;
+    background-color: var(--theme-secondary);
+    border: 2px solid var(--text-primary);
+    width: 80%;
+    height: 30vh;
+}
+
+/* footer */
+footer {
+    background-color: var(--theme-primary);
+    padding-top: 1rem;
+}
+
+.heading-footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer ul {
+    padding-left: 0;
+    text-align: center;
+}
+
+/* section */
+section {
+    background-color: var(--theme-secondary);
+    padding: 1rem;
+}
+
+/* container */
+.container {
+    border: 1px solid var(--text-primary);
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+
